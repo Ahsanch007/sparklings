@@ -1,5 +1,6 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 export const CleanerSection = () => {
   const members = [
     {
@@ -18,6 +19,9 @@ export const CleanerSection = () => {
     },
     // Add more members as needed
   ];
+  useEffect(() => {
+    Aos.init(); // Customize duration or other settings
+  }, []);
   return (
     <div className="w-full bg-gradient-to-b bg-[#124D6F] py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4">
@@ -31,6 +35,8 @@ export const CleanerSection = () => {
           </p>
         </div>
         <ul
+          data-aos-duration="1000"
+          data-aos="fade-up"
           role="list"
           className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
         >

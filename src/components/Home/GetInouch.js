@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 export const GetInouch = () => {
+  useEffect(() => {
+    Aos.init(); // Customize duration or other settings
+  }, []);
   return (
     <div className="py-10 bg-white   sm:py-16 lg:py-20 xl:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,6 +21,8 @@ export const GetInouch = () => {
           </div>
           <div style={{ opacity: 1, transform: 'none' }}>
             <img
+              data-aos-duration="1000"
+              data-aos="fade-up"
               className="IMAGE rounded-lg bg-slate-100 w-[37.5rem] h-[25rem] object-cover aspect-[3/2]"
               alt="Cleaning service"
               src="/assets/c74ae977-9f24-46db-bdaa-45aa11aaa236.jpg"

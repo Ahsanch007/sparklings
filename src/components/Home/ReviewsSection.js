@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 const testimonials = [
   {
     text: 'Sparkling Clean exceeded my expectations. My home is spotless, and I love the attention to detail!',
@@ -21,10 +23,14 @@ const testimonials = [
 ];
 
 export const ReviewsSection = () => {
+  useEffect(() => {
+    Aos.init(); // Customize duration or other settings
+  }, []);
+
   return (
     <div className="py-10 bg-[#E8FDFF]">
       <div className="px-4 py-10 mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3" data-aos-duration="1000" data-aos="fade-up">
           {testimonials.map((testimonial, index) => (
             <div key={index} style={{ opacity: 1, transform: 'none' }}>
               <div className="w-full h-full flex flex-col bg-white   border border-black/10   rounded-md">

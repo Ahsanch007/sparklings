@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
+
 const menuItems = [
   { text: 'About Sparkling Clean', href: '#about' },
   { text: 'Our Cleaning Services', href: '#services' },
@@ -14,10 +17,18 @@ const socialLinks = [
   { platform: 'linkedin', url: 'https://linkedin.com/company/sparklingclean' },
 ];
 export const Footer = () => {
+  useEffect(() => {
+    Aos.init(); // Customize duration or other settings
+  }, []);
+
   return (
     <div className="py-10 bg-white  ">
       <div style={{ opacity: 1, transform: 'none' }}>
-        <div className="px-4 mx-auto max-w-7xl py-10 flex flex-col items-center gap-16">
+        <div
+          className="px-4 mx-auto max-w-7xl py-10 flex flex-col items-center gap-16"
+          data-aos-duration="1000"
+          data-aos="fade-up"
+        >
           <ul className="w-full grid grid-cols-2 text-center gap-6 md:grid-cols-5">
             {menuItems.map((item, index) => (
               <li key={index}>

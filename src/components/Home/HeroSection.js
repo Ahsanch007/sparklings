@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 export const HeroSection = () => {
+  useEffect(() => {
+    Aos.init(); // Customize duration or other settings
+  }, []);
+
   return (
     <div className="w-full px-6 py-24 mx-auto max-w-7xl bg-[#EEFAFC]   md:px-8 md:py-32">
       <div className="w-full h-full grid grid-cols-1 gap-16 md:grid-cols-2">
         <div className=" w-full flex flex-col gap-14 justify-between">
-          <div className="w-full flex flex-col gap-10">
+          <div className="w-full flex flex-col gap-10" data-aos-duration="1000" data-aos="fade-up">
             <h1 className="TITLE-PRIMARY text-start w-full text-5xl font-semibold text-[#020102]   md:text-6xl">
               <div>Welcome to Sparkling Clean</div>
             </h1>
@@ -54,7 +60,7 @@ export const HeroSection = () => {
               </div>
               <img src="/assets/check.svg" className="w-[14px] h-auto" alt="" />
             </button>
-            <p class="text-[#5D9DC8]  ">
+            <p class="text-[#5D9DC8]  " data-aos-duration="1000" data-aos="fade-up">
               <div>
                 Experience the finest in professional cleaning services with a personal touch. We are proud to be a
                 woman-owned business serving Tampa and St. Petersburg with comprehensive cleaning solutions, including
@@ -63,23 +69,31 @@ export const HeroSection = () => {
             </p>
           </div>
         </div>
-        <div style={{ opacity: 1, transform: 'none' }}>
+        <div style={{ opacity: 1, transform: 'none' }} data-aos-duration="1000" data-aos="fade-up">
           <div
+            data-aos-duration="1000"
+            data-aos="fade-up"
             className="relative w-full h-[26rem] md:h-[36rem]"
             style={{ perspective: '1000px', transform: 'rotateY(0deg) rotateX(0deg)' }}
           >
             <div
-              className="w-full h-full flex items-center justify-center relative transition-all duration-300"
+              className="w-full h-full flex items-center justify-center relative transition-all duration-300 hover:translate-y-2"
               style={{ transformStyle: 'preserve-3d' }}
             >
               <div className="relative w-full h-full overflow-hidden rounded-[2rem] rounded-tl-[6rem] rounded-br-[6rem] transition-all duration-500">
                 <img
+                  data-aos-duration="1000"
+                  data-aos="fade-up"
                   className="w-full h-full bg-[#ADDCEA] dark:bg-[#5D9DC8] object-cover"
                   alt="team_image"
                   src="/assets/photo-1581578731548-c64695cc6952.jpeg"
                   style={{ backgroundColor: 'transparent' }}
                 />
-                <div className="absolute h-1/2 bottom-0 w-full flex flex-col gap-3 justify-end p-10 bg-gradient-to-t from-[#5D9DC8]/60 transition-all duration-500">
+                <div
+                  data-aos-duration="1000"
+                  data-aos="fade-up"
+                  className="absolute h-1/2 bottom-0 w-full flex flex-col gap-3 justify-end p-10 bg-gradient-to-t from-[#5D9DC8]/60 transition-all duration-500"
+                >
                   <div className="w-full text-xl text-[#EEFAFC] font-semibold md:text-2xl">Our Expert Team</div>
                   <div className="w-full text-sm text-[#EEFAFC] font-light md:text-base">
                     Our dedicated team ensures your space is spotless, handling everything from routine cleanings to

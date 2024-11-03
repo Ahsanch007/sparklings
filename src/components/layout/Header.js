@@ -25,8 +25,8 @@ export const Header = () => {
     <section
       className={`fixed left-8 right-8 top-5 z-40 bg-white backdrop-blur-xl md:max-w-[1376px] m-auto transition-all duration-500 ${
         isScrolled
-          ? ' rounded-[200px] md:top-6 md:left-8 md:right-8 md:px-4'
-          : ' rounded-[200px] md:rounded-none md:top-0 md:left-0 md:right-0'
+          ? ' rounded-[200px] md:top-6 md:left-8 md:right-8 sm:px-4'
+          : ' rounded-[200px] md:rounded-none md:top-0 md:left-0 md:right-0 sm:px-4'
       }`}
       style={{
         boxShadow: 'rgba(0, 0, 0, 0.04) 0px 4px 40px 0px',
