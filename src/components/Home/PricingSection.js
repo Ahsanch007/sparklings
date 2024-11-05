@@ -50,7 +50,7 @@ export const PricingSection = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-base font-semibold leading-7 text-[#8BC2D6]">Pricing</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-slate-900   sm:text-5xl">
+          <p className="mt-2 text-4xl font-semibold tracking-[-0.05em] text-slate-900   sm:text-5xl">
             Affordable Cleaning Packages
           </p>
         </div>

@@ -17,6 +17,20 @@ export const CleanerSection = () => {
       imgSrc: '/assets/26e332cc-ded6-4ae9-bd2b-184caef3eaf0.jpg',
       imgAlt: 'Emily Brown',
     },
+    {
+      name: 'Emily Brown',
+      role: 'Cleaning Specialist',
+      location: 'St. Petersburg, FL',
+      imgSrc: '/assets/photo-1581578731548-c64695cc6952.jpeg',
+      imgAlt: 'Emily Brown',
+    },
+    {
+      name: 'Emily Brown',
+      role: 'Cleaning Specialist',
+      location: 'St. Petersburg, FL',
+      imgSrc: '/assets/26e332cc-ded6-4ae9-bd2b-184caef3eaf0.jpg',
+      imgAlt: 'Emily Brown',
+    },
     // Add more members as needed
   ];
   useEffect(() => {
